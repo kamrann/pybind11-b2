@@ -1,0 +1,24 @@
+lib{pybind11}: {hxx}{**}
+
+# Build options.
+#
+cxx.poptions =+ "-I$out_base" "-I$src_base/upstream/include"
+
+# Export options.
+#
+lib{pybind11}:
+{
+  cxx.export.poptions = "-I$out_base" "-I$src_base/upstream/include"
+}
+
+# Install into the pybind11/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+upstream/include/
+{
+  {hxx}{*}:
+  {
+    install         = include/
+    install.subdirs = true
+  }
+}

@@ -1,0 +1,6 @@
+$out_root/
+{
+  include pybind11/
+}
+
+export $out_root/pybind11/$import.target

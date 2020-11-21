@@ -1,0 +1,13 @@
+: 1
+name: pybind11
+version: 2.6.1-a.1
+upstream-version: 2.6.1
+summary: pybind11 - C++ Python bindings
+license: other: proprietary ; Not free/open source.
+description-file: README.md
+url: https://github.com/pybind/pybind11
+package-url: https://github.com/kamrann/pybind11-b2
+email: cjangus@gmail.com
+
+depends: * build2 >= 0.13.0
+depends: * bpkg >= 0.13.0
